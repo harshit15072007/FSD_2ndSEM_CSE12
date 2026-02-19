@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Feedback Form</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <h1>Class Test</h1>
+    <h1 align="center">Class Test</h1>
+    
+
+    <div class="container">        
+    <h1>Online Feedback Form</h1>
+    <form action="">
+
+        <label for="">Full Name</label>
+        <input type="text" name="fullname" placeholder="Enter your name"><br><br>
+
+        <label for="">Email</label>
+        <input type="email" name="email" placeholder="Enter Your Mail"><br><br>
+
+        <label for="">Mobile No.</label>
+        <input type="tel" placeholder="Enter Your Number" minlength="10" maxlength="10"><br><br>
+
+        <label for=""><b>Rate our Services</b></label><br>
+        <input type="radio" name="rating" value="Excellent">Excellent
+        <input type="radio" name="rating" value="Very Good">Very Good
+        <input type="radio" name="rating" value="Good">Good
+        <input type="radio" name="rating" value="Average">Average
+        <br><br>
+
+        <label>Services Used</label><br>
+        <input type="checkbox" name="service" value="Website"> Website
+        <input type="checkbox" name="service" value="Customer Support"> Customer Support
+        <input type="checkbox" name="service" value="Delivery"> Delivery
+        <br><br>
+
+         <label>Additional Comments</label><br>
+        <textarea name="comments" rows="5" cols="40" placeholder="Write your comments here..."></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit Feedback">
+        <input type="reset" value="Reset">
+
+        </form>
+        </fieldset>
+        </div>
 </body>
 </html>
