@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone - Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>ShopZone</h2>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="nav-links">
+            <div>
+                <span>Hello, Sign In</span>
+                <p>Account</p>
+            </div>
+
+            <div>
+                <span>Returns</span>
+                <p>& Orders</p>
+            </div>
+
+            <div class="cart-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Bar -->
+    <div class="category-bar">
+        <a href="#">Electronics</a>
+        <a href="#">Fashion</a>
+        <a href="#">Mobiles</a>
+        <a href="#">Books</a>
+        <a href="#">Home</a>
+        <a href="#">Gaming</a>
+        <a href="#">Appliances</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to ShopZone</h1>
+            <p>Big Deals. Better Prices.</p>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="">
+            <h3>Nike Shoes</h3>
+            <p>₹2,999</p>
+            <button onclick="addToCart('Nike Shoes',2999)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
+            <h3>Smartphone</h3>
+            <p>₹19,999</p>
+            <button onclick="addToCart('Smartphone',19999)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="">
+            <h3>Headphones</h3>
+            <p>₹1,499</p>
+            <button onclick="addToCart('Headphones',1499)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12" alt="">
+            <h3>Smart Watch</h3>
+            <p>₹3,999</p>
+            <button onclick="addToCart('Smart Watch',3999)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505" alt="">
+            <h3>Laptop</h3>
+            <p>₹59,999</p>
+            <button onclick="addToCart('Laptop',59999)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="">
+            <h3>Classic Watch</h3>
+            <p>₹2,499</p>
+            <button onclick="addToCart('Classic Watch',2499)">
+                Add to Cart
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button onclick="toggleCart()">✖</button>
+        </div>
+
+        <ul id="cart-items"></ul>
+
+        <div class="cart-footer">
+            <h3>Total: ₹<span id="total">0</span></h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 ShopZone. College Project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<div id="toast" class="toast">
+ Item added to cart!
+</div>
+</body>
+</html>
