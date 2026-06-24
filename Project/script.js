@@ -69,3 +69,53 @@ function showToast(message){
         toast.classList.remove("show");
     }, 2000);
 }
+
+function searchProducts() {
+
+    const searchValue = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+
+        const productName = product
+            .querySelector("h3")
+            .innerText
+            .toLowerCase();
+
+        if (productName.includes(searchValue)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+document
+.getElementById("searchInput")
+.addEventListener("input", function () {
+
+    const value = this.value.toLowerCase().trim();
+
+    const products = document.querySelectorAll(".product-card");
+
+    if (value === "") {
+
+        products.forEach(product => {
+            product.style.display = "block";
+        });
+    }
+});
+
+document
+.getElementById("searchInput")
+.addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+        searchProducts();
+    }
+});
